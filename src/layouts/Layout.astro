@@ -1,7 +1,5 @@
 ---
 import "../styles/global.css";
-import "@fontsource/poppins/400.css";
-import "@fontsource/poppins/900.css";
 import Header from "../components/Header.astro";
 ---
 
@@ -15,14 +13,8 @@ import Header from "../components/Header.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Distronaut</title>
   </head>
-  <body class="bg-purple-950 text-gray-50">
+  <body class="bg-purple-950 text-gray-50 antialiased">
     <Header />
     <main class="my-24 max-w-5xl mx-auto p-4"><slot /></main>
   </body>
 </html>
-
-<style>
-  body {
-    font-family: "Poppins", sans-serif;
-  }
-</style>

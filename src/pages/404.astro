@@ -1,0 +1,23 @@
+---
+import Title from "../components/Title.astro";
+import Button from "../components/ui/Button.astro";
+import Layout from "../layouts/Layout.astro";
+import { House } from "@lucide/astro";
+---
+
+<Layout>
+  <div class="flex flex-col items-center justify-center gap-5 h-[50dvh]">
+    <div class="flex flex-col items-center">
+      <h5 class="md:text-3xl text-2xl font-extrabold font-mono">404</h5>
+      <Title title="Page Not Found" />
+    </div>
+    <p class="text-zinc-400 text-center max-w-md">
+      Looks like this distro drifted into deep space. The page you are trying to
+      reach could not be found.
+    </p>
+    <Button href="/" variant="secondary">
+      <House class="mr-2" />
+      Go back Home</Button
+    >
+  </div>
+</Layout>
