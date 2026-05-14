@@ -1,0 +1,37 @@
+---
+import Distronaut from "../assets/distronaut.webp";
+
+const NAV_LINKS = [
+  { label: "Distros", href: "/distros" },
+  { label: "Rankings", href: "/rankings" },
+  { label: "Battles", href: "/battles" },
+  { label: "Tier List", href: "/tier-list" },
+  { label: "News", href: "/news" },
+];
+const pathname = Astro.url.pathname;
+---
+
+<header class="fixed top-0 w-full">
+  <div class="max-w-5xl mx-auto p-4 flex items-center justify-between">
+    <div class="flex items-center gap-5">
+      <a href="/" class="flex items-center gap-1">
+        <img src={Distronaut.src} alt="distro" class="w-12 h-12" />
+        <span class="font-bold text-xl">Distronaut</span>
+      </a>
+      <nav>
+        <ul class="flex items-center gap-5">
+          {
+            NAV_LINKS.map((link) => (
+              <a
+                href={link.href}
+                class={`hover:text-purple-300 ${pathname == link.href ? "font-extrabold" : ""}`}
+              >
+                {link.label}
+              </a>
+            ))
+          }
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
